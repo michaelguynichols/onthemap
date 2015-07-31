@@ -8,11 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		4C2283351B5C7FF2005FED49 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2283341B5C7FF2005FED49 /* AppDelegate.swift */; };
-		4C2283371B5C7FF2005FED49 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2283361B5C7FF2005FED49 /* ViewController.swift */; };
-		4C22833A1B5C7FF2005FED49 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C2283381B5C7FF2005FED49 /* Main.storyboard */; };
+		4C2283371B5C7FF2005FED49 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2283361B5C7FF2005FED49 /* LogInViewController.swift */; };
 		4C22833C1B5C7FF2005FED49 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C22833B1B5C7FF2005FED49 /* Images.xcassets */; };
 		4C22833F1B5C7FF2005FED49 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C22833D1B5C7FF2005FED49 /* LaunchScreen.xib */; };
 		4C22834B1B5C7FF2005FED49 /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C22834A1B5C7FF2005FED49 /* OnTheMapTests.swift */; };
+		4C2283611B5C9084005FED49 /* LaunchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C2283601B5C9084005FED49 /* LaunchImage.png */; };
+		4C2283631B5C9EB0005FED49 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2283621B5C9EB0005FED49 /* CustomTextField.swift */; };
+		4C2CB5B31B65D19A001FA14C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2CB5B21B65D19A001FA14C /* FBSDKCoreKit.framework */; };
+		4C2CB5B91B65D836001FA14C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C2CB5B81B65D836001FA14C /* FBSDKLoginKit.framework */; };
+		4C6B8EC01B69B02D00F08CC2 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6B8EBF1B69B02D00F08CC2 /* Student.swift */; };
+		4CE585001B6705250045CBAA /* UdacityLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE584FF1B6705250045CBAA /* UdacityLogin.swift */; };
+		4CE585021B67061E0045CBAA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE585011B67061E0045CBAA /* Constants.swift */; };
+		4CE585051B672B310045CBAA /* ParseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE585041B672B310045CBAA /* ParseConstants.swift */; };
+		4CE585071B672B6C0045CBAA /* StudentInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE585061B672B6C0045CBAA /* StudentInformation.swift */; };
+		4CE585091B672D1D0045CBAA /* ParseClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE585081B672D1D0045CBAA /* ParseClient.swift */; };
+		4CEB32431B631E4400673D67 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB32421B631E4400673D67 /* MapViewController.swift */; };
+		4CEB32451B63283000673D67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CEB32441B63283000673D67 /* Main.storyboard */; };
+		4CEB32471B6329C400673D67 /* PinTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB32461B6329C400673D67 /* PinTableViewController.swift */; };
+		4CEB32491B6339E100673D67 /* PostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEB32481B6339E100673D67 /* PostingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,13 +42,27 @@
 		4C22832F1B5C7FF2005FED49 /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2283331B5C7FF2005FED49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C2283341B5C7FF2005FED49 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C2283361B5C7FF2005FED49 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4C2283391B5C7FF2005FED49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C2283361B5C7FF2005FED49 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		4C22833B1B5C7FF2005FED49 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4C22833E1B5C7FF2005FED49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		4C2283441B5C7FF2005FED49 /* OnTheMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C2283491B5C7FF2005FED49 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C22834A1B5C7FF2005FED49 /* OnTheMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTests.swift; sourceTree = "<group>"; };
+		4C2283601B5C9084005FED49 /* LaunchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LaunchImage.png; sourceTree = "<group>"; };
+		4C2283621B5C9EB0005FED49 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		4C2CB5B21B65D19A001FA14C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		4C2CB5B71B65D6F0001FA14C /* Bridging_Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging_Header.h; sourceTree = "<group>"; };
+		4C2CB5B81B65D836001FA14C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../../../../Documents/FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		4C6B8EBF1B69B02D00F08CC2 /* Student.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		4CE584FF1B6705250045CBAA /* UdacityLogin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UdacityLogin.swift; sourceTree = "<group>"; };
+		4CE585011B67061E0045CBAA /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4CE585041B672B310045CBAA /* ParseConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseConstants.swift; sourceTree = "<group>"; };
+		4CE585061B672B6C0045CBAA /* StudentInformation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StudentInformation.swift; sourceTree = "<group>"; };
+		4CE585081B672D1D0045CBAA /* ParseClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseClient.swift; sourceTree = "<group>"; };
+		4CEB32421B631E4400673D67 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		4CEB32441B63283000673D67 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		4CEB32461B6329C400673D67 /* PinTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinTableViewController.swift; sourceTree = "<group>"; };
+		4CEB32481B6339E100673D67 /* PostingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +70,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2CB5B91B65D836001FA14C /* FBSDKLoginKit.framework in Frameworks */,
+				4C2CB5B31B65D19A001FA14C /* FBSDKCoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,12 +106,18 @@
 		4C2283311B5C7FF2005FED49 /* OnTheMap */ = {
 			isa = PBXGroup;
 			children = (
+				4CE585031B672B1C0045CBAA /* ParseModel */,
+				4CEB324D1B648ABC00673D67 /* UdacityModel */,
+				4CEB324A1B6341F300673D67 /* View */,
+				4CEB32411B631E2B00673D67 /* Controller */,
 				4C2283341B5C7FF2005FED49 /* AppDelegate.swift */,
-				4C2283361B5C7FF2005FED49 /* ViewController.swift */,
-				4C2283381B5C7FF2005FED49 /* Main.storyboard */,
+				4CEB32441B63283000673D67 /* Main.storyboard */,
 				4C22833B1B5C7FF2005FED49 /* Images.xcassets */,
 				4C22833D1B5C7FF2005FED49 /* LaunchScreen.xib */,
+				4C2CB5B81B65D836001FA14C /* FBSDKLoginKit.framework */,
+				4C2CB5B21B65D19A001FA14C /* FBSDKCoreKit.framework */,
 				4C2283321B5C7FF2005FED49 /* Supporting Files */,
+				4C2CB5B71B65D6F0001FA14C /* Bridging_Header.h */,
 			);
 			path = OnTheMap;
 			sourceTree = "<group>";
@@ -90,6 +125,7 @@
 		4C2283321B5C7FF2005FED49 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4C2283601B5C9084005FED49 /* LaunchImage.png */,
 				4C2283331B5C7FF2005FED49 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +146,45 @@
 				4C2283491B5C7FF2005FED49 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4CE585031B672B1C0045CBAA /* ParseModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CE585041B672B310045CBAA /* ParseConstants.swift */,
+				4CE585081B672D1D0045CBAA /* ParseClient.swift */,
+				4CE585061B672B6C0045CBAA /* StudentInformation.swift */,
+				4C6B8EBF1B69B02D00F08CC2 /* Student.swift */,
+			);
+			name = ParseModel;
+			sourceTree = "<group>";
+		};
+		4CEB32411B631E2B00673D67 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4C2283361B5C7FF2005FED49 /* LogInViewController.swift */,
+				4CEB32421B631E4400673D67 /* MapViewController.swift */,
+				4CEB32461B6329C400673D67 /* PinTableViewController.swift */,
+				4CEB32481B6339E100673D67 /* PostingViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		4CEB324A1B6341F300673D67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4C2283621B5C9EB0005FED49 /* CustomTextField.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		4CEB324D1B648ABC00673D67 /* UdacityModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CE584FF1B6705250045CBAA /* UdacityLogin.swift */,
+				4CE585011B67061E0045CBAA /* Constants.swift */,
+			);
+			name = UdacityModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,9 +267,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C22833A1B5C7FF2005FED49 /* Main.storyboard in Resources */,
 				4C22833F1B5C7FF2005FED49 /* LaunchScreen.xib in Resources */,
 				4C22833C1B5C7FF2005FED49 /* Images.xcassets in Resources */,
+				4C2283611B5C9084005FED49 /* LaunchImage.png in Resources */,
+				4CEB32451B63283000673D67 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,8 +288,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C2283371B5C7FF2005FED49 /* ViewController.swift in Sources */,
+				4C2283371B5C7FF2005FED49 /* LogInViewController.swift in Sources */,
 				4C2283351B5C7FF2005FED49 /* AppDelegate.swift in Sources */,
+				4C2283631B5C9EB0005FED49 /* CustomTextField.swift in Sources */,
+				4CE585001B6705250045CBAA /* UdacityLogin.swift in Sources */,
+				4CEB32431B631E4400673D67 /* MapViewController.swift in Sources */,
+				4CE585071B672B6C0045CBAA /* StudentInformation.swift in Sources */,
+				4CE585051B672B310045CBAA /* ParseConstants.swift in Sources */,
+				4C6B8EC01B69B02D00F08CC2 /* Student.swift in Sources */,
+				4CEB32471B6329C400673D67 /* PinTableViewController.swift in Sources */,
+				4CEB32491B6339E100673D67 /* PostingViewController.swift in Sources */,
+				4CE585021B67061E0045CBAA /* Constants.swift in Sources */,
+				4CE585091B672D1D0045CBAA /* ParseClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,14 +322,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4C2283381B5C7FF2005FED49 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C2283391B5C7FF2005FED49 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4C22833D1B5C7FF2005FED49 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -295,6 +373,7 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = OnTheMap/Bridging_Header.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -332,6 +411,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = OnTheMap/Bridging_Header.h;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -340,9 +420,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Michael/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = OnTheMap/Bridging_Header.h;
 			};
 			name = Debug;
 		};
@@ -350,9 +436,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Michael/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = OnTheMap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = OnTheMap/Bridging_Header.h;
 			};
 			name = Release;
 		};
@@ -409,6 +501,7 @@
 				4C2283501B5C7FF2005FED49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C2283511B5C7FF2005FED49 /* Build configuration list for PBXNativeTarget "OnTheMapTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +510,7 @@
 				4C2283531B5C7FF2005FED49 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
