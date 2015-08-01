@@ -72,7 +72,7 @@
                                 </constraints>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <variation key="default">
                                     <mask key="constraints">
                                         <exclude reference="Z7b-az-CA4"/>
@@ -579,6 +579,15 @@
                                 <exclude reference="9M1-TK-LzV"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="Z5y-pR-iZv"/>
+                                <exclude reference="JKM-Hq-jhl"/>
+                                <exclude reference="wXY-BC-WnT"/>
+                                <exclude reference="FZK-5K-diz"/>
+                                <exclude reference="aLt-tu-mSd"/>
+                                <exclude reference="3qf-kt-NuG"/>
+                                <exclude reference="jZd-lY-OJd"/>
+                                <exclude reference="9GQ-MV-6xb"/>
+                                <exclude reference="HIQ-bI-7LQ"/>
                                 <exclude reference="4Pv-Df-fXG"/>
                                 <exclude reference="bTO-Bx-BQA"/>
                                 <exclude reference="c4N-DH-v6R"/>
@@ -591,17 +600,8 @@
                                 <exclude reference="Kpl-lU-sOa"/>
                                 <exclude reference="npS-bH-UiI"/>
                                 <exclude reference="whI-ik-ZGO"/>
-                                <exclude reference="FZK-5K-diz"/>
-                                <exclude reference="aLt-tu-mSd"/>
                                 <exclude reference="2K7-Fa-e8U"/>
                                 <exclude reference="mJA-RF-Eqq"/>
-                                <exclude reference="JKM-Hq-jhl"/>
-                                <exclude reference="wXY-BC-WnT"/>
-                                <exclude reference="3qf-kt-NuG"/>
-                                <exclude reference="jZd-lY-OJd"/>
-                                <exclude reference="9GQ-MV-6xb"/>
-                                <exclude reference="HIQ-bI-7LQ"/>
-                                <exclude reference="Z5y-pR-iZv"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -616,6 +616,15 @@
                                 <include reference="9M1-TK-LzV"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Z5y-pR-iZv"/>
+                                <include reference="JKM-Hq-jhl"/>
+                                <include reference="wXY-BC-WnT"/>
+                                <include reference="FZK-5K-diz"/>
+                                <include reference="aLt-tu-mSd"/>
+                                <include reference="3qf-kt-NuG"/>
+                                <include reference="jZd-lY-OJd"/>
+                                <include reference="9GQ-MV-6xb"/>
+                                <include reference="HIQ-bI-7LQ"/>
                                 <include reference="4Pv-Df-fXG"/>
                                 <include reference="bTO-Bx-BQA"/>
                                 <include reference="c4N-DH-v6R"/>
@@ -628,17 +637,8 @@
                                 <include reference="Kpl-lU-sOa"/>
                                 <include reference="npS-bH-UiI"/>
                                 <include reference="whI-ik-ZGO"/>
-                                <include reference="FZK-5K-diz"/>
-                                <include reference="aLt-tu-mSd"/>
                                 <include reference="2K7-Fa-e8U"/>
                                 <include reference="mJA-RF-Eqq"/>
-                                <include reference="JKM-Hq-jhl"/>
-                                <include reference="wXY-BC-WnT"/>
-                                <include reference="3qf-kt-NuG"/>
-                                <include reference="jZd-lY-OJd"/>
-                                <include reference="9GQ-MV-6xb"/>
-                                <include reference="HIQ-bI-7LQ"/>
-                                <include reference="Z5y-pR-iZv"/>
                             </mask>
                         </variation>
                     </view>
@@ -743,6 +743,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="table" destination="Np7-i6-vqO" id="m6M-gA-mag"/>
                         <segue destination="fdt-Im-dR2" kind="presentation" identifier="TableToPostSegue" id="4WI-6l-m5E"/>
                     </connections>
                 </tableViewController>
@@ -757,6 +758,6 @@
         <image name="Udacity" width="256" height="256"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="7BE-Qv-tK3"/>
+        <segue reference="4WI-6l-m5E"/>
     </inferredMetricsTieBreakers>
 </document>

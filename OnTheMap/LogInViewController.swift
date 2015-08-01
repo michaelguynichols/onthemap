@@ -19,6 +19,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     let udacitySignUpURL = NSURL(string: "https://www.udacity.com/account/auth#!/signup")
     var firstName = String()
     var lastName = String()
+    let object = UIApplication.sharedApplication().delegate
+    var appDelegate: AppDelegate!
     
     // Creating Facebook Login Button View
     let loginView : FBSDKLoginButton = FBSDKLoginButton()
@@ -32,6 +34,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         
         // Assigning delegates
         assignDelegates()
+        
+        appDelegate = object as! AppDelegate
         
         if (FBSDKAccessToken.currentAccessToken() != nil) {
             
@@ -52,8 +56,9 @@ class LogInViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         } else if result.isCancelled {
             // Handle cancellations
         } else {
-            // If you ask for multiple permissions at once, you
-            // should check if specific permissions missing
+            
+            // If log in successful on facebook, get user info and segue to map
+            returnUserData()
             self.performSegueWithIdentifier("ToMapSegue", sender: self)
         }
     }
@@ -77,9 +82,8 @@ class LogInViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
             else
             {
                 // Setting memes array equal to AppDelegate memes data model
-                let object = UIApplication.sharedApplication().delegate
-                let appDelegate = object as! AppDelegate
-                appDelegate.userID = result.valueForKey("id") as! String
+                self.appDelegate.userID = result.valueForKey("id") as! String
+                println(self.appDelegate.userID)
                 let userName : NSString = result.valueForKey("name") as! NSString
                 self.splitName(userName as String)
                 
@@ -87,13 +91,12 @@ class LogInViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         })
     }
     
+    // Helper functiont to get first and last name of facebook user.
     func splitName(userName: String) {
         let fullName = split(userName) {$0 == " "}
         if fullName.count == 2 {
             firstName = fullName[0]
             lastName = fullName[1]
-            let object = UIApplication.sharedApplication().delegate
-            let appDelegate = object as! AppDelegate
             appDelegate.FBFirstName = firstName
             appDelegate.FBLastName = lastName
         }

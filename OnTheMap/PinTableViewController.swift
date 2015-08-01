@@ -13,17 +13,19 @@ import FBSDKLoginKit
 
 class PinTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
-    var userLocations = [StudentInformation]()
+    let object = UIApplication.sharedApplication().delegate
+    var appDelegate: AppDelegate!
+    @IBOutlet var table: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setBarItems()   
+        setBarItems()
+        
+        table.delegate = self
         
         // Setting userLocations equal to loaded Parse user locations if any from appDelegate.
-        let object = UIApplication.sharedApplication().delegate
-        let appDelegate = object as! AppDelegate
-        userLocations = appDelegate.studentInformation
+        appDelegate = object as! AppDelegate
         
     }
     
@@ -42,14 +44,14 @@ class PinTableViewController: UITableViewController, UITableViewDataSource, UITa
     
     // Delegate method to get count for table
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return userLocations.count
+        return appDelegate.studentInformation.count
     }
     
     // Delegate method to set information for each table cell
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let CellReuseId = "pinData"
-        let userLocation = userLocations[indexPath.row]
+        let userLocation = appDelegate.studentInformation[indexPath.row]
         let cell = tableView.dequeueReusableCellWithIdentifier(CellReuseId) as! UITableViewCell
         
         let firstName = userLocation.getInfoByKey("firstName") as! String
@@ -64,7 +66,7 @@ class PinTableViewController: UITableViewController, UITableViewDataSource, UITa
     // Delegate method to open up url associated with each name in table rows
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let userLocation = userLocations[indexPath.row]
+        let userLocation = appDelegate.studentInformation[indexPath.row]
         if let mediaURL = userLocation.getInfoByKey("mediaURL") as? String {
             let URL = NSURL(string: mediaURL)
             UIApplication.sharedApplication().openURL(URL!)
@@ -83,7 +85,9 @@ class PinTableViewController: UITableViewController, UITableViewDataSource, UITa
             if let error = error?.domain {
                 println(error)
             } else {
-                // Successful reload
+                dispatch_async(dispatch_get_main_queue(), { () -> Void in
+                    self.table.reloadData()
+                })
             }
         }
         

@@ -13,9 +13,13 @@ class ParseClient {
     
     /* Shared session */
     var session: NSURLSession
+    let object = UIApplication.sharedApplication().delegate
+    var appDelegate: AppDelegate!
+    
     
     init() {
         session = NSURLSession.sharedSession()
+        appDelegate = object as! AppDelegate
     }
     
     // Helper function to parse JSON data.
@@ -26,6 +30,8 @@ class ParseClient {
     }
     
     func getStudentLocations(completionHandler: (result: [StudentInformation]!, error: NSError?) -> Void) -> NSURLSessionDataTask {
+        // Emptying old data to add new data from call
+        self.appDelegate.studentInformation.removeAll(keepCapacity: false)
         
         // Making request
         let request = NSMutableURLRequest(URL: NSURL(string: ParseClient.URL.baseURL)!)
@@ -51,17 +57,12 @@ class ParseClient {
                             var studentInformation = StudentInformation(responseData: studentlocationInformation)
                             
                             // Appending to student struct array in App Delegate
-                            let object = UIApplication.sharedApplication().delegate
-                            let appDelegate = object as! AppDelegate
-                            appDelegate.studentInformation.append(studentInformation)
+                            self.appDelegate.studentInformation.append(studentInformation)
 
                         }
                         
                         // If data is good, send it to the completion handler.
-                        let object = UIApplication.sharedApplication().delegate
-                        let appDelegate = object as! AppDelegate
-                        completionHandler(result: appDelegate.studentInformation, error: nil)
-                        
+                        completionHandler(result: self.appDelegate.studentInformation, error: nil)
                     }
                 }
             }
@@ -83,8 +84,6 @@ class ParseClient {
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         
         // Getting current logged in student info
-        let object = UIApplication.sharedApplication().delegate
-        let appDelegate = object as! AppDelegate
         let student = appDelegate.currentUser!
 
         

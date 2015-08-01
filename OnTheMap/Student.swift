@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Student struct to pass to post method later.
+// Student struct to pass to post method later. This is not the required StudentInformation struct that accepts a dictionary.
 struct Student {
     
     var uniqueKey: String

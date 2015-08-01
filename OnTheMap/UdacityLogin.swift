@@ -15,6 +15,8 @@ class UdacityLogin {
     
     var userName: String?
     var userPassword: String?
+    let object = UIApplication.sharedApplication().delegate
+    var appDelegate: AppDelegate!
     
     /* Shared session */
     var session: NSURLSession
@@ -23,6 +25,7 @@ class UdacityLogin {
         userName = user
         userPassword = pass
         session = NSURLSession.sharedSession()
+        appDelegate = object as! AppDelegate
     }
     
     // Helper function to parse data.
@@ -56,9 +59,7 @@ class UdacityLogin {
                             if registered {
                                 dispatch_async(dispatch_get_main_queue(), {
                                     // Setting memes array equal to AppDelegate memes data model
-                                    let object = UIApplication.sharedApplication().delegate
-                                    let appDelegate = object as! AppDelegate
-                                    appDelegate.userID = account["key"]
+                                    self.appDelegate.userID = account["key"]
                                     completionHandler(result: registered, error: nil)
                                 })
                             }
@@ -113,8 +114,6 @@ class UdacityLogin {
     func getUserInfo(completionHandler: (result: AnyObject!, error: NSError?) -> Void) -> NSURLSessionDataTask {
         
         // Using app delegate to get current user info
-        let object = UIApplication.sharedApplication().delegate
-        let appDelegate = object as! AppDelegate
         let userID = appDelegate.userID as! String
         let URL = UdacityLogin.URLs.udacityUserInfoURL + userID
         
